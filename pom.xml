@@ -106,6 +106,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>event-repo-image</finalName>
 	</build>
 	<repositories>
 		<repository>
