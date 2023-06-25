@@ -1,5 +1,5 @@
-package com.stackroute.eventmanagement.authentication.service;//package com.stackroute.com.AuthenticationService.service;
-//
+package com.stackroute.eventmanagement.authentication.service;
+
 //import com.stackroute.com.AuthenticationService.exception.UserAlreadyExistsException;
 //import com.stackroute.com.AuthenticationService.model.UserModel;
 //import com.stackroute.com.AuthenticationService.repository.UserRepository;

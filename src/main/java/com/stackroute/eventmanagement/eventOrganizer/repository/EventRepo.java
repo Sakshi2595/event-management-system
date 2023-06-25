@@ -18,7 +18,7 @@ public interface EventRepo extends JpaRepository<Event, Integer>{
     public List<Event> findByDate(String date);
 
     //create findByEventId method for finding event by eventId
-    public Event findByEventId(String eventId);
+    public Event findByEventId(int eventId);
 
 }
 

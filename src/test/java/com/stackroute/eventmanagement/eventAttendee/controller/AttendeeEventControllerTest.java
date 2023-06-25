@@ -1,5 +1,5 @@
-package com.stackroute.eventmanagement.eventAttendee.controller;//package com.stackroute.eventmanagement.controller;
-//
+package com.stackroute.eventmanagement.eventAttendee.controller;
+
 //import com.stackroute.eventmanagement.model.AttendeeEventRegistration;
 //import com.stackroute.eventmanagement.service.AttendeeRegistrationService;
 //import org.junit.jupiter.api.BeforeEach;

@@ -1,7 +1,8 @@
 package com.stackroute.eventmanagement.eventAttendee.service;
 
-import com.stackroute.eventmanagement.model.AttendeeEventRegistration;
-import com.stackroute.eventmanagement.repository.AttendeeEventRegistrationRepo;
+
+import com.stackroute.eventmanagement.eventAttendee.model.AttendeeEventRegistration;
+import com.stackroute.eventmanagement.eventAttendee.repository.AttendeeEventRegistrationRepo;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

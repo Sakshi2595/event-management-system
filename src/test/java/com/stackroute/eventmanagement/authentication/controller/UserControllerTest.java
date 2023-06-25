@@ -1,5 +1,5 @@
-package com.stackroute.eventmanagement.authentication.controller;//package com.stackroute.com.AuthenticationService.controller;
-//
+package com.stackroute.eventmanagement.authentication.controller;
+
 //class UserControllerTest {
 //
 //}

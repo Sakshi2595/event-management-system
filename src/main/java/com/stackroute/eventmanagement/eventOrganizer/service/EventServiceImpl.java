@@ -58,7 +58,7 @@ public class EventServiceImpl implements EventService{
 
     //implement method for updating event
     @Override
-    public String updateEvent(Event event, String eventId) {
+    public String updateEvent(Event event, int eventId) {
         Event e = eventRepo.findByEventId(eventId);
         if(e != null){
             e.setEventName(event.getEventName());
@@ -79,7 +79,7 @@ public class EventServiceImpl implements EventService{
 
     //implement method for deleting event
     @Override
-    public String deleteEvent(String eventId) {
+    public String deleteEvent(int eventId) {
         Event e = eventRepo.findByEventId(eventId);
         if(e != null){
             eventRepo.delete(e);

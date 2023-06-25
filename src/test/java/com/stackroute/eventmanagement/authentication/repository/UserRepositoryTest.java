@@ -1,5 +1,5 @@
-package com.stackroute.eventmanagement.authentication.repository;//package com.stackroute.com.AuthenticationService.repository;
-//
+package com.stackroute.eventmanagement.authentication.repository;
+
 //import com.stackroute.com.AuthenticationService.model.UserModel;
 //import org.junit.jupiter.api.Test;
 //import org.junit.jupiter.api.extension.ExtendWith;

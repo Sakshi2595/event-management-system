@@ -14,8 +14,8 @@ public interface EventService {
     List<Event> getEventsByDate(String date);
     List<Event> getEventsByLocation(String location);
     String createEvent(Event event);
-    String updateEvent(Event event,String eventId);
-    String deleteEvent(String eventId);
+    String updateEvent(Event event,int eventId);
+    String deleteEvent(int eventId);
 
 }
 

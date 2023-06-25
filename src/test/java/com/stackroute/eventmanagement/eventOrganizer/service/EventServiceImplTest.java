@@ -1,12 +1,14 @@
 package com.stackroute.eventmanagement.eventOrganizer.service;
 
-import com.stackroute.eventmanagement.model.Event;
-import com.stackroute.eventmanagement.repository.EventRepo;
-import org.junit.jupiter.api.BeforeEach;
+
+import com.stackroute.eventmanagement.eventOrganizer.model.Event;
+import com.stackroute.eventmanagement.eventOrganizer.repository.EventRepo;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,19 +18,19 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.verify;
 
+@RunWith(SpringRunner.class)
+@SpringBootTest
 class EventServiceImplTest {
 
-    @Mock
+    //autowire the EventService
+    @Autowired
+    private EventService eventService;
+
+    //mock the EventRepo
+    @MockBean
     private EventRepo eventRepo;
 
-    @InjectMocks
-    private EventServiceImpl eventService;
-
-    @BeforeEach
-    public void setUp() {
-        MockitoAnnotations.initMocks(this);
-    }
-
+    //add test case for service getAllEvents() of EventServiceImpl class
     @Test
     public void testGetAllEvents() {
         // Prepare test data
@@ -49,6 +51,7 @@ class EventServiceImplTest {
         assertEquals(2, result.size());
     }
 
+// add test case for service getEventsByDate() of EventServiceImpl class
     @Test
     public void testGetEventsByDate() {
         // Prepare test data
@@ -66,9 +69,9 @@ class EventServiceImplTest {
         // Verify the repository method is called
         verify(eventRepo).findAll();
 
-        // Assert the result
-      //  assertEquals(2, result.size());
     }
+
+// add test case for service getEventsByLocation() of EventServiceImpl class
 
     @Test
     public void testGetEventsByLocation() {
@@ -91,6 +94,7 @@ class EventServiceImplTest {
       //  assertEquals(2, result.size());
     }
 
+// add test case for service createEvent() of EventServiceImpl class
     @Test
     public void testCreateEvent() {
         // Prepare test data
@@ -109,11 +113,12 @@ class EventServiceImplTest {
         assertEquals("Event Created Successfully", result);
     }
 
+// add test case for service updateEvent() of EventServiceImpl class
     @Test
     public void testUpdateEvent() {
         // Prepare test data
         Event event = new Event();
-        String eventId = "123";
+        int eventId = 123;
 
         // Configure mock repository
         doReturn(event).when(eventRepo).findByEventId(eventId);
@@ -130,11 +135,12 @@ class EventServiceImplTest {
         assertEquals("Event Updated Successfully", result);
     }
 
+// add test case for service deleteEvent() of EventServiceImpl class
     @Test
     public void testDeleteEvent() {
         // Prepare test data
         Event event = new Event();
-        String eventId = "123";
+        int eventId = 123;
 
         // Configure mock repository
         doReturn(event).when(eventRepo).findByEventId(eventId);
